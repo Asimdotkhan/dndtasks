@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ABS Monthly Data Downloader</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="icon" href="/static/images/abslogo.png" type="image/png">
+    <!-- <script src="/static/script.js"></script> -->
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h1 class="text-center text-light" >ABS Data Downloader</h1>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label for="dataset" class="mr-2">Select a dataset:</label>
+                                    <select class="form-control mr-2" name="dataset" id="dataset">
+                                    {% for dataset_key, dataset_info in config.items() %}
+                                        <option value="{{ dataset_key }}">{{ dataset_info.name }}</option>
+                                    {% endfor %}
+                                    </select>
+                            </div>
+                                <div class="mb-3 ">
+                                    <label for="chunk_size">Enter Number of Areas Data you want to get per loop:</label>
+                                    <input type="number" name="chunk_size" id="chunk_size" required min="1" value="10">
+                                </div>
+                                <div class="text-center ">
+                                    <button type="submit" class="btn btn-primary" id="fetchButton" >Fetch Data</button>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

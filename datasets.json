@@ -1,0 +1,39 @@
+{
+    "building_approvals_lga": {
+      "name": "Building Approvals by Local Government Area (LGA 2022)",
+      "Baseurl": "https://api.data.abs.gov.au/data/ABS,BA_LGA2022,1.0.0/",
+      "keyending": ".....",
+      "areacode file path": "LGA 2022.csv",
+      "latest_month_url": "https://api.data.abs.gov.au/data/ABS,BA_LGA2022,1.0.0/1.9.TOT.110.AUS.AUS.M?startPeriod={latest_month}&endPeriod={latest_month}&dimensionAtObservation=AllDimensions"
+    },
+    "a":{
+      "name": "Building Approvals by Local Government Area (LGA 2023)",
+      "Baseurl": "https://api.data.abs.gov.au/data/ABS,BA_LGA2023,1.0.0/",
+      "keyending": ".....",
+      "areacode file path": "LGA 2022.csv",
+      "latest_month_url": "https://api.data.abs.gov.au/data/ABS,BA_LGA2023,1.0.0/1.9.TOT.TOT..AUS.M?startPeriod={latest_month}&endPeriod={latest_month}&dimensionAtObservation=AllDimensions"
+    } ,
+    "b":{
+      "name": "Building Approvals by Greater Capital Cities Statistical Area (GCCSA) and above",
+      "Baseurl": "https://api.data.abs.gov.au/data/ABS,BA_GCCSA,1.0.0/",
+      "keyending": "......",
+      "areacode file path": "Greater Capital Cities Statistical Area (GCCSA) and above.csv",
+      "latest_month_url": "https://api.data.abs.gov.au/data/ABS,BA_GCCSA,1.0.0/1.1.9.TOT.TOT.10.AUS.M?startPeriod={latest_month}&endPeriod={latest_month}&dimensionAtObservation=AllDimensions"
+    } ,
+    "c": {
+      "name": "c",
+      "Baseurl": "https://api.data.abs.gov.au/data/ABS,NEW_DATASET,1.0.0/",
+      "keyending": ".....",
+      "areacode file path": "New Dataset Area Codes.csv",
+      "latest_month_url": "https://api.data.abs.gov.au/data/ABS,NEW_DATASET,1.0.0/1.9.TOT.110.AUS.AUS.M?startPeriod={latest_month}&endPeriod={latest_month}&dimensionAtObservation=AllDimensions"
+    },
+    "d": {
+      "name": "d",
+      "Baseurl": "https://api.data.abs.gov.au/data/ABS,NEW_DATASET,1.0.0/",
+      "keyending": ".....",
+      "areacode file path": "New Dataset Area Codes.csv",
+      "latest_month_url": "https://api.data.abs.gov.au/data/ABS,NEW_DATASET,1.0.0/1.9.TOT.110.AUS.AUS.M?startPeriod={latest_month}&endPeriod={latest_month}&dimensionAtObservation=AllDimensions"
+    }
+    
+  }
+  

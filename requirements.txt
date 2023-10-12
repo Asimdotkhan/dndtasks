@@ -1,0 +1,9 @@
+Flask==2.2.5
+Werkzeug==2.2.3
+pandas==2.1.1
+beautifulsoup4==4.12.2
+tqdm==4.66.1
+requests==2.31.0
+pantab==3.0.1
+pyreadr==0.4.9
+pyreadstat==1.2.3
