@@ -22,12 +22,13 @@ def get_latest_available_month(latest_month_url):
         current_date -= timedelta(days=1)
 
 
-def get_data(Baseurl,keyending,latest_month,areacode_file_path,chunk_size):   
-    Filter = []
-    with open(areacode_file_path, "r") as csvfile:
-        reader = csv.reader(csvfile)
-        next(reader)  # Skip the header row
-        Filter = [row[0].strip() for row in reader]
+def get_data(Baseurl,keyending,latest_month,areacode_data,chunk_size):   
+    
+    Filter = areacode_data
+
+# Assuming the JSON file contains an array of objects and each object has a "field" key
+# This code extracts values from the "field" key in each object
+    
 
     data_with_labels = []
     progress_bar = tqdm(total=len(Filter), desc="Fetching Data")

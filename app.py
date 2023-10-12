@@ -17,6 +17,9 @@ def welcome():
 with open('datasets.json', 'r') as json_file:
     config = json.load(json_file)
 
+with open('areacode.json', 'r') as json_file:
+    areacode_data = json.load(json_file)
+
 @app.route('/fileconverter', methods=['GET', 'POST'])
 def file_converter():
     if request.method == 'POST':
@@ -142,10 +145,11 @@ def ausdataset():
         keyending = config[dataset_choice]["keyending"]
         latest_month_url = config[dataset_choice]["latest_month_url"]
         areacode_file_path = config[dataset_choice]["areacode file path"]
+        areacode = areacode_data[areacode_file_path]
         
         latest_month = get_latest_available_month(latest_month_url)
 
-        data_with_labels=get_data(Baseurl,keyending,latest_month,areacode_file_path,chunk_size)
+        data_with_labels=get_data(Baseurl,keyending,latest_month,areacode,chunk_size)
 
         if data_with_labels:
             with open(name, "w", newline="", encoding="utf-8") as csvfile:
